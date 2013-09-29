@@ -17,4 +17,4 @@
 //= require_tree .
 
 // Loads all Bootstrap javascripts
-//= require twitter/bootstrap
+//= require bootstrap
