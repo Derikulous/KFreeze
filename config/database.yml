@@ -1,0 +1,21 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: k_freeze_pop_development
+  pool: 5
+  username: k_freeze_pop
+  password:
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: k_freeze_pop_test
+  pool: 5
+  username: k_freeze_pop
+  password:
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: k_freeze_pop_production
+  pool: 5
+  username: k_freeze_pop
+  password:
