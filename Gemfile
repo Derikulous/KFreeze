@@ -29,6 +29,10 @@ group :test do
   # Uncomment this line on OS X.
    gem 'growl', '1.0.3'
 
+group :assets do
+  gem 'twitter-bootstrap-rails'
+end
+
   # Uncomment these lines on Linux.
   # gem 'libnotify', '0.8.0'
 
