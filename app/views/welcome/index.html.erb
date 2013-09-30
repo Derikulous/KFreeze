@@ -119,8 +119,8 @@
               <% if current_user.present? %>
               Welcome <%= current_user.user_name %>! | <%= link_to 'Sign Out', logout_path %>
                 <% else %>
-              <li><%= link_to 'Sign In', login_path %></li>
-              <li><%= link_to 'Register', new_user_path %></li>
+              <li><%= link_to "Sign in", login_path, class: "btn btn-primary btn-sm" %></li>
+              <li><%= link_to 'Register', signup_path %></li>
               <% end %>
               <%= notice %>
               <%= alert %>
@@ -174,6 +174,7 @@
         <!-- /.carousel -->
 
         <div id="footer">
+          <li><%= link_to "Contact", contact_path %></li>
         </div>
 
 

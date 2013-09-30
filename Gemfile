@@ -7,9 +7,14 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'faker', '1.1.2'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
-gem 'minitest-rails'
 
-gem 'rails_12factor', group: :production
+group :development, :test do
+  gem 'minitest-rails'
+end
+
+group :production do
+  gem 'rails_12factor'
+end
 gem 'sqlite3'
 gem 'unicorn'
 
