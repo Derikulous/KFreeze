@@ -1,0 +1,18 @@
+<p><%= @user.user_name %></p>
+<p><%= @user.email %></p>
+<h1><%= notice %></h1>
+<li>
+  Name: <%= @user.user_name %><br>
+</li>
+<li>
+  Email: <%= @user.email %><br>
+</li>
+<li>
+ <%= @user.password_confirmation %><br>
+</li>
+<% end %>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %>
+<%= link_to 'Back', users_path %>
+<%= link_to "Delete", user_path(@user), method: :delete %>

@@ -10,7 +10,7 @@ gem 'bootstrap-will_paginate', '0.0.9'
 gem 'minitest-rails'
 
 gem 'rails_12factor', group: :production
-gem 'pg'
+gem 'sqlite3'
 gem 'unicorn'
 
 # group :development, :test do
@@ -32,9 +32,6 @@ gem 'unicorn'
   # # Uncomment this line on OS X.
   #  gem 'growl', '1.0.3'
 
-group :assets do
-  gem 'twitter-bootstrap-rails'
-end
 
   # Uncomment these lines on Linux.
   # gem 'libnotify', '0.8.0'
@@ -45,6 +42,7 @@ end
   # gem 'wdm', '0.1.0'
 
 
+gem 'twitter-bootstrap-rails'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'

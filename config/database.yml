@@ -1,21 +1,15 @@
 development:
-  adapter: postgresql
-  encoding: unicode
-  database: k_freeze_pop_development
+  adapter: sqlite3
+  database: db/development.sqlite3
   pool: 5
-  username: k_freeze_pop
-  password:
-test:
-  adapter: postgresql
-  encoding: unicode
-  database: k_freeze_pop_test
+  timeout: 5000
+  test:
+  adapter: sqlite3
+  database: db/test.sqlite3
   pool: 5
-  username: k_freeze_pop
-  password:
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: k_freeze_pop_production
+  timeout: 5000
+  production:
+  adapter: sqlite3
+  database: db/production.sqlite3
   pool: 5
-  username: k_freeze_pop
-  password:
+  timeout: 5000
