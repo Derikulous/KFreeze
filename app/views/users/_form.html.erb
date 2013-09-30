@@ -1,5 +1,5 @@
 <%= form_for @user do |f| %>
-
+<%= render 'shared/error_messages' %>
 <fieldform>
   <div>
     <%= f.label :user_name %><br>
@@ -17,6 +17,6 @@
     <%= f.label :password_confirmation %><br>
     <%= f.password_field :password_confirmation %>
   </div>
-<%= f.submit %>
+<%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
 <% end %>
 </fieldform>
