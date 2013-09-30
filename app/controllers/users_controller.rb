@@ -9,6 +9,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @posts = @user.posts.paginate(page: params[:page])
   end
 
   def new
@@ -51,8 +52,6 @@ class UsersController < ApplicationController
       params.require(:user).permit(:user_name, :email, :password,
                                    :password_confirmation)
     end
-
-    # Before filters
 
     def signed_in_user
       unless signed_in?

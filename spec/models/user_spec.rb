@@ -16,6 +16,8 @@ describe User do
  it { should respond_to(:password_confirmation) }
  it { should respond_to(:authenticate) }
  it { should respond_to(:admin) }
+ it { should respond_to(:posts) }
+ it { should respond_to(:feed) }
 
  it { should be_valid }
  it { should_not be_admin }
@@ -114,4 +116,15 @@ describe "email address with mixed case" do
     expect(@user.reload.email).to eq mixed_case_email.downcase
   end
 end
+  describe "post associations" do
+
+    before { @user.save }
+    let!(:older_post) do
+      FactoryGirl.create(:post, user: @user, created_at: 1.day.ago)
+    end
+    let!(:newer_post) do
+      FactoryGirl.create(:post, user: @user, created_at: 1.hour.ago)
+    end
+  end
 end
+
