@@ -1,8 +1,13 @@
 KFreezePop::Application.routes.draw do
 
-  resources :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
   resources :sessions, only: [:new, :create, :destroy]
   resources :posts, only: [:create, :destroy]
+  resources :relationships, only: [:create, :destroy]
   match '/edit',  to: 'users#edit',            via: 'get'
   match '/signup',  to: 'users#new',            via: 'get'
   match '/help',    to: 'static_pages#help',    via: 'get'

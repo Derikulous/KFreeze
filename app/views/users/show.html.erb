@@ -1,42 +1,56 @@
 <% provide(:title, @user.user_name) %>
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="navbar-inner">
-    <div class="container">
-      <%= link_to "KFreezePop", root_path %>
-      <nav>
-        <ul class="nav pull-right">
-          <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Help", help_path %></li>
-          <% if signed_in? %>
-          <li><%= link_to "Users", users_path %></li>
-          <li id="fat-menu" class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              Account <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-              <li><%= link_to "Profile", current_user %></li>
-              <li><%= link_to "Settings", edit_user_path(current_user) %></li>
-              <li class="divider"></li>
-              <li>
-                <%= link_to "Sign out", logout_path, method: "delete" %>
+<div class="row">
+  <aside class="span4">
+    <section>
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+      </h1>
+    </section>
+    <section>
+      <%= render 'shared/stats' %>
+    </section>
+  </aside>
+  <div class="span8">
+    <%= render 'follow_form' if signed_in? %>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <%= link_to "KFreezePop", root_path %>
+          <nav>
+            <ul class="nav pull-right">
+              <li><%= link_to "Home", root_path %></li>
+              <li><%= link_to "Help", help_path %></li>
+              <% if signed_in? %>
+              <li><%= link_to "Users", users_path %></li>
+              <li id="fat-menu" class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  Account <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><%= link_to "Profile", current_user %></li>
+                  <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+                  <li class="divider"></li>
+                  <li>
+                    <%= link_to "Sign out", logout_path, method: "delete" %>
+                  </li>
+                </ul>
               </li>
-            </ul>
-          </li>
-          <% else %>
-          <li><%= link_to "Sign in", login_path %></li>
-          <% end %>
-          <div class="span8">
-            <% if @user.posts.any? %>
-            <h3>Posts (<%= @user.posts.count %>)</h3>
-            <ol class="posts">
-              <%= render @posts %>
-            </ol>
-            <%= will_paginate @posts %>
-            <% end %>
-          </div>
-        </div>
-      </ul>
-    </nav>
-  </div>
-</div>
-</header>
+              <% else %>
+              <li><%= link_to "Sign in", login_path %></li>
+              <% end %>
+              <div class="span8">
+                <% if @user.posts.any? %>
+                <h3>Posts (<%= @user.posts.count %>)</h3>
+                <ol class="posts">
+                  <%= render @posts %>
+                </ol>
+                <%= will_paginate @posts %>
+                <% end %>
+              </div>
+            </div>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
