@@ -12,10 +12,8 @@ group :development, :test do
   gem 'minitest-rails'
 end
 
-group :production do
-  gem 'rails_12factor'
-end
-gem 'sqlite3'
+gem 'rails_12factor', group: :production
+gem 'pg'
 gem 'unicorn'
 
 # group :development, :test do
