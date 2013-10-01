@@ -116,9 +116,9 @@
                 </ul>
               </li>
               <% if current_user.present? %>
-              Welcome <%= current_user.user_name %>! | <%= link_to 'Sign Out', logout_path %>
+              Welcome <%= current_user.user_name %>! | <%= link_to 'Sign Out', signout_path %>
               <% else %>
-              <li><%= link_to "Sign in", login_path, class: "btn btn-primary btn-sm" %></li>
+              <li><%= link_to "Sign in", signin_path, class: "btn btn-primary btn-sm" %></li>
               <li><%= link_to 'Register', signup_path %></li>
               <% end %>
               <%= notice %>

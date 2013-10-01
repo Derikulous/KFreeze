@@ -3,8 +3,7 @@
   <aside class="span4">
     <section>
       <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
+        <%= @user.user_name %>
       </h1>
     </section>
     <section>
@@ -32,12 +31,12 @@
                   <li><%= link_to "Settings", edit_user_path(current_user) %></li>
                   <li class="divider"></li>
                   <li>
-                    <%= link_to "Sign out", logout_path, method: "delete" %>
+                    <%= link_to "Sign out", signout_path, method: "delete" %>
                   </li>
                 </ul>
               </li>
               <% else %>
-              <li><%= link_to "Sign in", login_path %></li>
+              <li><%= link_to "Sign in", signin_path %></li>
               <% end %>
               <div class="span8">
                 <% if @user.posts.any? %>

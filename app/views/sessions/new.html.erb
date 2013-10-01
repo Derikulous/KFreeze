@@ -1,6 +1,8 @@
 <% provide(:title, "Sign in") %>
 <center><h1>Sign in</h1></center>
 
+<div class="row">
+  <div class="span6 offset4">
 <%= form_for(:session, url: sessions_path) do |f| %>
 <div>
   <%= f.label :email %>
@@ -12,4 +14,6 @@
 </div>
 <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
 <% end %>
+
 <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+</div>
