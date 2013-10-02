@@ -29,22 +29,24 @@
                 <ul class="dropdown-menu">
                   <li><%= link_to "Profile", current_user %></li>
                   <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+                  <li><%= link_to "Create Post", microposts_path %></li>
                   <li class="divider"></li>
                   <li>
-                    <%= link_to "Sign out", signout_path, method: "delete" %>
+                    <%= link_to 'Sign out', signout_path %>
                   </li>
                 </ul>
               </li>
               <% else %>
               <li><%= link_to "Sign in", signin_path %></li>
+
               <% end %>
               <div class="span8">
-                <% if @user.posts.any? %>
-                <h3>Posts (<%= @user.posts.count %>)</h3>
+                <% if @user.microposts.any? %>
+                <h3>Posts (<%= @user.microposts.count %>)</h3>
                 <ol class="posts">
-                  <%= render @posts %>
+                  <%= render @microposts %>
                 </ol>
-                <%= will_paginate @posts %>
+                <%= will_paginate @microposts %>
                 <% end %>
               </div>
             </div>

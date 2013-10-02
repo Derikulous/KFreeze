@@ -3,25 +3,23 @@
 
 <div class="row">
   <div class="span6 offset3">
-    <%= form_for(@user) do |f| %>
+    <%= form_for(@user) do |f| %><br>
     <%= render 'shared/error_messages', object: f.object %>
 
-    <%= f.label :user_name %>
+    <%= f.label :user_name %><br>
     <%= f.text_field :user_name %>
 
-    <%= f.label :email %>
+    <%= f.label :email %><br>
     <%= f.text_field :email %>
 
-    <%= f.label :password %>
+    <%= f.label :password %><br>
     <%= f.password_field :password %>
 
-    <%= f.label :password_confirmation, "Confirm Password" %>
+    <%= f.label :password_confirmation, "Confirm Password" %><br>
     <%= f.password_field :password_confirmation %>
 
     <%= f.submit "Save changes", class: "btn btn-primary btn-small" %>
     <% end %>
 
-    <%= gravatar_for @user %>
-    <a href="http://gravatar.com/emails">change</a>
   </div>
 </div>

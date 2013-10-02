@@ -116,13 +116,15 @@
                 </ul>
               </li>
               <% if current_user.present? %>
-              Welcome <%= current_user.user_name %>! | <%= link_to 'Sign Out', signout_path %>
+              Welcome <%= current_user.user_name %>! <span><%= link_to "Profile", current_user %></span> | <%= link_to 'Sign Out', signout_path %>
+
               <% else %>
               <li><%= link_to "Sign in", signin_path, class: "btn btn-primary btn-sm" %></li>
               <li><%= link_to 'Register', signup_path %></li>
               <% end %>
               <%= notice %>
               <%= alert %>
+
             </div><!-- /.nav-collapse -->
           </div><!-- /.container -->
         </div><!-- /.navbar-inner -->
