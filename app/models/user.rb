@@ -2,63 +2,45 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
-  has_many :microposts, dependent: :destroy
-  has_many :relationships, foreign_key: "follower_id", dependent: :destroy
-  has_many :followed_users, through: :relationships, source: :followed
-  has_many :reverse_relationships, foreign_key: "followed_id",
-  class_name:  "Relationship",
-  dependent:   :destroy
-  has_many :followers, through: :reverse_relationships, source: :follower
-  before_save { self.email = email.downcase }
-  before_create :create_remember_token
-  has_secure_password
-  validates :user_name, presence: :true, length: { minimum: 3, maximum: 25 }
-  validates :email, uniqueness: { case_sensitive: false },
-  format: {with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create, message: "Must be a valid email address"}
+  :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
-  def User.new_remember_token
-    SecureRandom.urlsafe_base64
+  #has_many :relationships, foreign_key: "follower_id", dependent: :destroy
+  #has_many :followed_users, through: :relationships, source: :followed
+  #has_many :reverse_relationships, foreign_key: "followed_id",
+
+  def admin?
+    role == 'admin'
   end
 
-  def User.encrypt(token)
-    Digest::SHA1.hexdigest(token.to_s)
+  def self.from_omniauth(auth)
+    where(auth.slice(:provider, :uid)).first_or_create do |user|
+      user.provider = auth.provider
+      user.uid = auth.uid
+      user.name = auth.info.nickname
+      user.email = auth.info.email
+    end
   end
 
-  def feed
-    Micropost.from_users_followed_by(self)
-  end
-
-  def following?(other_user)
-    relationships.find_by(followed_id: other_user.id)
-  end
-
-  def follow!(other_user)
-    relationships.create!(followed_id: other_user.id)
-  end
-
-  def unfollow!(other_user)
-    relationships.find_by(followed_id: other_user.id).destroy!
-  end
-
-  def email=(value)
-    value = value.strip.downcase
-    write_attribute :email, value
-  end
-
-  private
-
-  def create_remember_token
-    self.remember_token = User.encrypt(User.new_remember_token)
-  end
-
-
-
-  def self.search(search)
-    if search
-      find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+  def self.new_with_session(params, session)
+    if session["devise.user_attributes"]
+      new session["devise.user_attributes"] do |user|
+        user.attributes = params
+        user.valid?
+      end
     else
-      find(:all)
+      super
+    end
+  end
+
+  def password_required?
+    super && provider.blank?
+  end
+
+  def update_with_password(params, *options)
+    if encrypted_password.blank?
+      update_attributes(params, *options)
+    else
+      super
     end
   end
 end

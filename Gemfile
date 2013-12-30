@@ -18,13 +18,11 @@ gem 'pry-rails'
 gem 'font-awesome-rails'
 gem 'formtastic'
 
-
 group :development, :test do
   gem 'sqlite3'
   gem 'launchy'
   gem 'turn'
 end
-
 
 group :production do
   gem 'rails_12factor'
