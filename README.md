@@ -6,7 +6,7 @@ By [Derik](http://www.derikstrattan.com)
 
 *http://kfreezepop.herokuapp.com/*
 
-![image](http://www.soompi.com/wp-content/uploads/2013/09/bigbang_fantasticbaby.jpg)
+![image](http://www.soompi.com/wp-content/uploads/2013/09/bigbang_fantasticbaby.jpg "Big Bang")
 
 K-pop (Korean Pop) is breaking into the worldwide scene, especically after 2012's summer hit by PSY - "Gangnam Style".
 
