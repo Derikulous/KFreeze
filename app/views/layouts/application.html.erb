@@ -7,6 +7,109 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#"></a>
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li><%= link_to 'Home', root_url %></li>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Boy Groups <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="2am">2AM</a></li>
+              <li><a href="#">2PM</a></li>
+              <li><a href="#">BAP</a></li>
+              <li><a href="#">BEAST</a></li>
+              <li><a href="#">BIG BANG</a></li>
+              <li><a href="#">CNBLUE</a></li>
+              <li><a href="#">EXO</a></li>
+              <li><a href="#">F. CUZ</a></li>
+              <li><a href="#">FT ISLAND</a></li>
+              <li><a href="#">INFINITE</a></li>
+              <li><a href="#">MBLAQ</a></li>
+              <li><a href="#">NU'EST</a></li>
+              <li><a href="#">SHINee</a></li>
+              <li><a href="#">SS501</a></li>
+              <li><a href="#">SUPER JUNIOR</a></li>
+              <li><a href="#">TEEN TOP</a></li>
+              <li><a href="#">TVXQ</a></li>
+              <li><a href="#">U-KISS</a></li>
+              <li><a href="#">ZE:A</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Girl Groups <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">2NE1</a></li>
+              <li><a href="#">4MINUTE</a></li>
+              <li><a href="#">AFTER SCHOOL</a></li>
+              <li><a href="#">APINK</a></li>
+              <li><a href="#">BEAST</a></li>
+              <li><a href="#">BROWN EYED GIRLS</a></li>
+              <li><a href="#">CHOCOLAT</a></li>
+              <li><a href="#">DALSHABET</a></li>
+              <li><a href="#">F(X)</a></li>
+              <li><a href="#">GIRL'S DAY</a></li>
+              <li><a href="#">GIRL'S GENERATION</a></li>
+              <li><a href="#">KARA</a></li>
+              <li><a href="#">MISS A</a></li>
+              <li><a href="#">SECRET</a></li>
+              <li><a href="#">SISTAR</a></li>
+              <li><a href="#">T-ARA</a></li>
+              <li><a href="#">WONDER GIRLS</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Male Solo <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">JAY PARK</a></li>
+              <li><a href="#">K. WILL</a></li>
+              <li><a href="#">KIM HYUN JOONG</a></li>
+              <li><a href="#">KIM JONG KOOK</a></li>
+              <li><a href="#">PSY</a></li>
+              <li><a href="#">RAIN</a></li>
+              <li><a href="#">SEO IN GUK</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Female Solo <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">AILEE</a></li>
+              <li><a href="#">BoA</a></li>
+              <li><a href="#">HEYNE</a></li>
+              <li><a href="#">IU</a></li>
+              <li><a href="#">JUNIEL</a></li>
+              <li><a href="#">KIM HYUNA</a></li>
+              <li><a href="#">KIM YERIM</a></li>
+              <li><a href="#">KIM YUNA</a></li>
+              <li><a href="#">LEE HYORI</a></li>
+              <li><a href="#">NS YOON-G</a></li>
+              <li><a href="#">SON DAM BI</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hip Hop <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">DYNAMIC DUO</a></li>
+              <li><a href="#">GAEKO</a></li>
+              <li><a href="#">LEESSANG</a></li>
+              <li><a href="#">PRIMARY</a></li>
+              <li><a href="#">SIMON D</a></li>
+            </ul>
+          </li>
+          <%= notice %>
+          <%= alert %>
+
+        </div><!-- /.nav-collapse -->
+      </div><!-- /.container -->
+    </div><!-- /.navbar-inner -->
+  </header><!-- /.navbar -->
+
+  <!-- End navigation HTML -->
+
+
 <%= alert %>
 <%= yield %>
 
