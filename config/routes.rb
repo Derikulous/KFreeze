@@ -21,6 +21,7 @@ KFreezePop::Application.routes.draw do
   match '/teen-top',    to: 'static_pages#teen_top',    via: 'get'
   match '/tvxq',    to: 'static_pages#tvxq',    via: 'get'
   match '/u-kiss',    to: 'static_pages#u_kiss',    via: 'get'
+  match '/vixx',    to: 'static_pages#vixx',    via: 'get'
   match '/ze-a',    to: 'static_pages#ze_a',    via: 'get'
 
 
