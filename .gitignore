@@ -21,4 +21,4 @@
 /db/seeds.rb
 database.yml
 .DS_Store
-.secret
+
