@@ -23,6 +23,8 @@ KFreezePop::Application.routes.draw do
   match '/u-kiss',    to: 'static_pages#u_kiss',    via: 'get'
   match '/vixx',    to: 'static_pages#vixx',    via: 'get'
   match '/ze-a',    to: 'static_pages#ze_a',    via: 'get'
+  match '/2NE1',    to: 'static_pages#2ne1',    via: 'get'
+
 
 
   root "welcome#index"
