@@ -8,6 +8,7 @@ KFreezePop::Application.routes.draw do
   match '/bap',    to: 'guy_groups#bap',    via: 'get'
   match '/beast',    to: 'guy_groups#beast',    via: 'get'
   match '/big-bang',    to: 'guy_groups#big_bang',    via: 'get'
+  match '/c-clown',    to: 'guy_groups#c_clown',    via: 'get'
   match '/cn-blue',    to: 'guy_groups#cn_blue',    via: 'get'
   match '/exo',    to: 'guy_groups#exo',    via: 'get'
   match '/f-cuz',    to: 'guy_groups#f_cuz',    via: 'get'
