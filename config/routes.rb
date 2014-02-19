@@ -25,6 +25,7 @@ KFreezePop::Application.routes.draw do
   match '/ze-a',    to: 'guy_groups#ze_a',    via: 'get'
 
   #girl groups
+  match '/2ne1',    to: 'girl_groups#2ne1',    via: 'get'
   match '/4minute',    to: 'girl_groups#4minute',    via: 'get'
   match '/after-school',    to: 'girl_groups#after_school',    via: 'get'
   match '/apink',    to: 'girl_groups#apink',    via: 'get'
