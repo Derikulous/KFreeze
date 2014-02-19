@@ -42,5 +42,15 @@ KFreezePop::Application.routes.draw do
   match '/t-ara',    to: 'girl_groups#t_ara',    via: 'get'
   match '/wonder-girls',    to: 'girl_groups#wonder_girls',    via: 'get'
 
+  #male solo
+  match '/jay-park',    to: 'male_solo#jay_park',    via: 'get'
+  match '/k-will',    to: 'male_solo#k_will',    via: 'get'
+  match '/kim-hyun-joong',    to: 'male_solo#kim_hyun_joong',    via: 'get'
+  match '/kim-jong-kook',    to: 'male_solo#kim_jong_kook',    via: 'get'
+  match '/psy',    to: 'male_solo#psy',    via: 'get'
+  match '/rain',    to: 'male_solo#rain',    via: 'get'
+  match '/seo-in-guk',    to: 'male_solo#seo_in_guk',    via: 'get'
+  match '/taeyang',    to: 'male_solo#taeyang',    via: 'get'
+
   root "welcome#index"
 end
