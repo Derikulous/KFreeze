@@ -2,6 +2,7 @@ KFreezePop::Application.routes.draw do
 
   devise_for :users,
              controllers: {omniauth_callbacks: "omniauth_callbacks"}
+
   # guy groups
   match '/2am',    to: 'guy_groups#2am',    via: 'get'
   match '/2pm',    to: 'guy_groups#2pm',    via: 'get'
@@ -46,8 +47,10 @@ KFreezePop::Application.routes.draw do
   #male solo
   match '/jay-park',    to: 'male_solo#jay_park',    via: 'get'
   match '/k-will',    to: 'male_solo#k_will',    via: 'get'
+  match '/jun-hyung',    to: 'male_solo#jun_hyung',    via: 'get'
   match '/kim-hyun-joong',    to: 'male_solo#kim_hyun_joong',    via: 'get'
   match '/kim-jong-kook',    to: 'male_solo#kim_jong_kook',    via: 'get'
+  match '/kim-kyung-rok',    to: 'male_solo#kim_kyung_rok',    via: 'get'
   match '/psy',    to: 'male_solo#psy',    via: 'get'
   match '/rain',    to: 'male_solo#rain',    via: 'get'
   match '/seo-in-guk',    to: 'male_solo#seo_in_guk',    via: 'get'
