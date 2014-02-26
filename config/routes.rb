@@ -56,5 +56,20 @@ KFreezePop::Application.routes.draw do
   match '/seo-in-guk',    to: 'male_solo#seo_in_guk',    via: 'get'
   match '/taeyang',    to: 'male_solo#taeyang',    via: 'get'
 
+  #female solo
+  match '/ailee',    to: 'female_solo#ailee',    via: 'get'
+  match '/boa',    to: 'female_solo#boa',    via: 'get'
+  match '/heyne',    to: 'female_solo#heyne',    via: 'get'
+  match '/iu',    to: 'female_solo#iu',    via: 'get'
+  match '/juniel',    to: 'female_solo#juniel',    via: 'get'
+  match '/kim-hyuna',    to: 'female_solo#kim_hyuna',    via: 'get'
+  match '/kim-yerim',    to: 'female_solo#kim_yerim',    via: 'get'
+  match '/kim-yuna',    to: 'female_solo#kim_yuna',    via: 'get'
+  match '/lee-hyori',    to: 'female_solo#lee_hyori',    via: 'get'
+  match '/ns-yoon-g',    to: 'female_solo#ns_yoon_g',    via: 'get'
+  match '/son-dam-bi',    to: 'female_solo#son_dam_bi',    via: 'get'
+  match '/seo-in-young',    to: 'female_solo#seo_in_young',    via: 'get'
+
+
   root "welcome#index"
 end
