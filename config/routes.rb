@@ -67,9 +67,8 @@ KFreezePop::Application.routes.draw do
   match '/kim-yuna',    to: 'female_solo#kim_yuna',    via: 'get'
   match '/lee-hyori',    to: 'female_solo#lee_hyori',    via: 'get'
   match '/ns-yoon-g',    to: 'female_solo#ns_yoon_g',    via: 'get'
-  match '/son-dam-bi',    to: 'female_solo#son_dam_bi',    via: 'get'
   match '/seo-in-young',    to: 'female_solo#seo_in_young',    via: 'get'
-
+  match '/son-dam-bi',    to: 'female_solo#son_dam_bi',    via: 'get'
 
   root "welcome#index"
 end
