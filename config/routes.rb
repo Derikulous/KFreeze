@@ -6,6 +6,7 @@ KFreezePop::Application.routes.draw do
   # guy groups
   match '/2am',    to: 'guy_groups#2am',    via: 'get'
   match '/2pm',    to: 'guy_groups#2pm',    via: 'get'
+  match '/bangtan-boys',    to: 'guy_groups#bangtan_boys',    via: 'get'
   match '/bap',    to: 'guy_groups#bap',    via: 'get'
   match '/beast',    to: 'guy_groups#beast',    via: 'get'
   match '/big-bang',    to: 'guy_groups#big_bang',    via: 'get'
@@ -69,6 +70,22 @@ KFreezePop::Application.routes.draw do
   match '/ns-yoon-g',    to: 'female_solo#ns_yoon_g',    via: 'get'
   match '/seo-in-young',    to: 'female_solo#seo_in_young',    via: 'get'
   match '/son-dam-bi',    to: 'female_solo#son_dam_bi',    via: 'get'
+
+  #hip hop
+  match '/beenzino',    to: 'hip_hop#beenzino',    via: 'get'
+  match '/dynamic-duo',    to: 'hip_hop#dynamic_duo',    via: 'get'
+  match '/g-dragon',    to: 'hip_hop#g_dragon',    via: 'get'
+  match '/gaeko',    to: 'hip_hop#gaeko',    via: 'get'
+  match '/leessang',    to: 'hip_hop#leessang',    via: 'get'
+  match '/outsider',    to: 'hip_hop#outsider',    via: 'get'
+  match '/primary',    to: 'hip_hop#primary',    via: 'get'
+  match '/san-e',    to: 'hip_hop#san_e',    via: 'get'
+  match '/simon-d',    to: 'hip_hop#simon_d',    via: 'get'
+  match '/tablo',    to: 'hip_hop#tablo',    via: 'get'
+  match '/top',    to: 'hip_hop#top',    via: 'get'
+  match '/verbal-jint',    to: 'hip_hop#vernal_jint',    via: 'get'
+  match '/zion-t',    to: 'hip_hop#zion_t',    via: 'get'
+
 
   root "welcome#index"
 end
