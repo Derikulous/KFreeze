@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_filter :authenticate_user!, except: [:index, :show]
 
   def index
     @users = User.all
@@ -25,6 +26,8 @@ class UsersController < ApplicationController
   end
 
   def edit
+    correct_user
+    @user = User.find(params[:id])
   end
 
   def update
@@ -46,8 +49,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:user_name, :email, :password,
-     :password_confirmation)
+    params.require(:user).permit(:user_name, :email)
   end
 
   def signed_in_user
@@ -59,7 +61,7 @@ class UsersController < ApplicationController
 
   def correct_user
     @user = User.find(params[:id])
-    redirect_to(root_url) unless current_user?(@user)
+    redirect_to @user unless current_user?(@user), notice: "You are not authorized to edit this profile"
   end
 
   def admin_user
