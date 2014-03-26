@@ -4,6 +4,7 @@ KFreezePop::Application.routes.draw do
              controllers: {omniauth_callbacks: "omniauth_callbacks"}
 
   # guy groups
+  match '/100percent',    to: 'guy_groups#100',    via: 'get'
   match '/2am',    to: 'guy_groups#2am',    via: 'get'
   match '/2pm',    to: 'guy_groups#2pm',    via: 'get'
   match '/bangtan-boys',    to: 'guy_groups#bangtan_boys',    via: 'get'
@@ -12,6 +13,7 @@ KFreezePop::Application.routes.draw do
   match '/big-bang',    to: 'guy_groups#big_bang',    via: 'get'
   match '/c-clown',    to: 'guy_groups#c_clown',    via: 'get'
   match '/cn-blue',    to: 'guy_groups#cn_blue',    via: 'get'
+  match '/electroboyz',    to: 'guy_groups#electroboyz',    via: 'get'
   match '/exo',    to: 'guy_groups#exo',    via: 'get'
   match '/f-cuz',    to: 'guy_groups#f_cuz',    via: 'get'
   match '/ft-island',    to: 'guy_groups#ft_island',    via: 'get'
@@ -22,6 +24,7 @@ KFreezePop::Application.routes.draw do
   match '/ss501',    to: 'guy_groups#ss501',    via: 'get'
   match '/super-junior',    to: 'guy_groups#super_junior',    via: 'get'
   match '/teen-top',    to: 'guy_groups#teen_top',    via: 'get'
+  match '/troy',    to: 'guy_groups#troy',    via: 'get'
   match '/tvxq',    to: 'guy_groups#tvxq',    via: 'get'
   match '/u-kiss',    to: 'guy_groups#u_kiss',    via: 'get'
   match '/vixx',    to: 'guy_groups#vixx',    via: 'get'
@@ -60,6 +63,7 @@ KFreezePop::Application.routes.draw do
   #female solo
   match '/ailee',    to: 'female_solo#ailee',    via: 'get'
   match '/boa',    to: 'female_solo#boa',    via: 'get'
+  match '/gain',   to: 'female_solo#gain',   via: 'get'
   match '/heyne',    to: 'female_solo#heyne',    via: 'get'
   match '/iu',    to: 'female_solo#iu',    via: 'get'
   match '/juniel',    to: 'female_solo#juniel',    via: 'get'
