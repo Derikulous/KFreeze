@@ -38,7 +38,7 @@ KFreezePop::Application.routes.draw do
   match '/brown-eyed-girls',    to: 'girl_groups#brown_eyed_girls',    via: 'get'
   match '/chocolat',    to: 'girl_groups#chocolat',    via: 'get'
   match '/dalshabet',    to: 'girl_groups#dalshabet',    via: 'get'
-  match '/fX',    to: 'girl_groups#fX',    via: 'get'
+  match '/fx',    to: 'girl_groups#fX',    via: 'get'
   match '/girls-day',    to: 'girl_groups#girls_day',    via: 'get'
   match '/girls-generation',    to: 'girl_groups#girls_generation',    via: 'get'
   match '/kara',    to: 'girl_groups#kara',    via: 'get'
