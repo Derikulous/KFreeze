@@ -17,6 +17,7 @@ gem 'high_voltage'
 gem 'pry-rails'
 gem 'font-awesome-rails'
 gem 'formtastic'
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'sqlite3'
