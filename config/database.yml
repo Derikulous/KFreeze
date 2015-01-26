@@ -10,6 +10,8 @@ development:
   timeout: 5000
   production:
   adapter: postgresql
+  encoding: unicode
   database:
   pool: 5
-  timeout: 5000
+  username:
+  password:

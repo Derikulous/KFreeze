@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.1.0'
 
-gem 'rails', '4.2'
+gem 'rails', '4.0.3'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
@@ -18,8 +18,11 @@ gem 'pry-rails'
 gem 'font-awesome-rails'
 gem 'formtastic'
 gem 'newrelic_rpm'
+gem 'hoe', '~> 3.13.0'
 
 group :development, :test do
+  gem 'minitest'
+  gem 'minitest-rails'
   gem 'sqlite3'
   gem 'launchy'
   gem 'turn'
