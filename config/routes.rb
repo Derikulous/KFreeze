@@ -1,8 +1,5 @@
 KFreezePop::Application.routes.draw do
 
-  devise_for :users,
-             controllers: {omniauth_callbacks: "omniauth_callbacks"}
-
   # guy groups
   match '/100percent',    to: 'guy_groups#100',    via: 'get'
   match '/2am',    to: 'guy_groups#2am',    via: 'get'
